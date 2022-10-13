@@ -4,7 +4,9 @@
   "description": "this is a client to test websocket, mqtt and amqp connection with rabbitmq server",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development node ./app.js",
+    "prod": "cross-env NODE_ENV=production node ./app.js"
   },
   "keywords": [
     "rabbitmq",
@@ -13,6 +15,8 @@
   "author": "darkwilly08",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.10.3"
+    "amqplib": "^0.10.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3"
   }
 }
