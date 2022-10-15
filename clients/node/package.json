@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node ./app.js",
-    "prod": "cross-env NODE_ENV=production node ./app.js"
+    "prod": "cross-env NODE_ENV=production node ./app.js",
+    "consumer": "cross-env NODE_ENV=production node ./consumer.js",
+    "producer": "cross-env NODE_ENV=production node ./producer.js",
+    "consumer:oneToOne": "cross-env NODE_ENV=production node ./oneToOne/consumer.js",
+    "producer:oneToOne": "cross-env NODE_ENV=production node ./oneToOne/producer.js",
+    "consumer:mqtt": "cross-env NODE_ENV=production node ./mqtt/consumer.js",
+    "producer:mqtt": "cross-env NODE_ENV=production node ./mqtt/producer.js",
+    "consumer:topics": "cross-env NODE_ENV=production node ./topics/consumer.js",
+    "producer:topics": "cross-env NODE_ENV=production node ./topics/producer.js"
   },
   "keywords": [
     "rabbitmq",
@@ -17,6 +25,7 @@
   "dependencies": {
     "amqplib": "^0.10.3",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "mqtt": "^4.3.7"
   }
 }
